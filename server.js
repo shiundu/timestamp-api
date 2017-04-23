@@ -32,7 +32,7 @@ app.get('/:date', function(req, res){
         }
     }
     else if(!isNaN(date)){
-        if((new Date(date)).getTime()){
+        if((new Date(+date)).getTime()){
             var normal = formatDate(new Date(+date))
             var unixtime = (new Date(+date)).getTime()
         }
